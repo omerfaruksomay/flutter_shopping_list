@@ -89,9 +89,7 @@ class _GroceryListState extends State<GroceryList> {
     setState(() {
       _groceryItems.remove(item);
     });
-    final url = Uri.https(
-        'dummy-backend-5c314-default-rtdb.europe-west1.firebasedatabase.app',
-        'shopping-list/${item.id}.json');
+    final url = Uri.https('database name', 'shopping-list/${item.id}.json');
 
     final response = await http.delete(url);
 
